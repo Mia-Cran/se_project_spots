@@ -3,12 +3,12 @@
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   min-height: 100vh;
 }
-.header_logo {
+.header__logo {
   background-color: #ffffff;
   padding: 10px 80px;
 }
 
-.header_logo_image {
+.header__logo-image {
   width: 94px;
   height: 26px;
   display: block;
@@ -27,34 +27,34 @@
   border-bottom: 1px solid gray;
   max-width: 1350px;
 }
-.profile_picture {
+.profile__pic {
   margin-left: 45px;
   border-radius: 10px;
 }
 
-.profile_name {
+.profile__name {
   width: 420px;
   font-size: 32px;
   margin: 0;
   font-weight: 500;
 }
-.profile_description {
+.profile__description {
   font-weight: 500;
   line-height: 100%;
   font-size: 16px;
   opacity: 70%;
 }
-.edit_profile-button {
+.edit__profile-button {
   gap: 8px;
   display: flex;
   opacity: 70%;
   margin-top: 105px;
 }
-.edit_profile_pencil {
+.edit__profile_pencil {
   height: 16px;
   width: 12px;
 }
-.profile_add-button {
+.profile__add-button {
   display: flex;
   margin-left: auto;
   padding: 18px 32px;
@@ -66,7 +66,7 @@
   border-radius: 10px;
   margin-right: 40px;
 }
-.card_image {
+.card__image {
   width: 413px;
   height: 413px;
   border-radius: 10px;
@@ -74,14 +74,14 @@
 .cards {
   margin-top: 30px;
 }
-.cards_list {
+.cards__list {
   display: grid;
   grid-template-columns: 413px 413px 413px;
   gap: 20px;
   list-style-type: none;
   margin: 0 auto;
 }
-.card_title {
+.card__title {
   margin: 0;
   margin-top: 10px;
   font-weight: 500;
@@ -91,11 +91,11 @@
   overflow: hidden;
 }
 
-.card_content {
+.card__content {
   display: flex;
   justify-content: space-between;
 }
-.card_like-button {
+.card__like-button {
   background-color: transparent;
   appearance: none;
   border: none;
@@ -116,16 +116,16 @@
     text-align: center;
   }
 
-  .profile_picture {
+  .profile__picture {
     margin-left: 0;
     margin-bottom: 20px;
   }
 
-  .profile_add-button {
+  .profile__add-button {
     margin-right: 0;
     margin-top: 20px;
   }
-  .cards_list {
+  .cards__list {
     grid-template-columns: 1fr;
     gap: 20px;
   }
