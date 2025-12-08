@@ -19,3 +19,13 @@ This project is made so all the elements are displayed correctly on popular scre
 The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster. 
   
 Good luck and have fun!
+
+The project's name-Spots Project
+
+A description of the project and its functionality-The Spots project is a social media platform is very similar to facebook and Myspace in a way tht users can build their profile and interact with others by sharing and creating posts as well as liking, sharing, adding and removing pictures.
+
+A description of the technologies and techniques used-Figma was used as the outline to build the platform, VS code editor built the code and AI helped out shape it all.
+
+Pictures, GIFs, or screenshots that detail the project features (highly recommended)-not sure how to add pictures here
+The link to your deployed project on GitHub Pages
+The link to your project pitch video
