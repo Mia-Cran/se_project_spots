@@ -22,7 +22,7 @@ Good luck and have fun!
 
 The project's name-Spots Project
 
-A description of the project and its functionality-The Spots project is a social media platform is very similar to facebook and Myspace in a way tht users can build their profile and interact with others by sharing and creating posts as well as liking, sharing, adding and removing pictures.
+A description of the project and its functionality-The Spots project is a social media platform that is very similar to Facebook and Myspace in a way that users can build their profile and interact with others by sharing and creating posts as well as liking, sharing, adding and removing pictures.
 
 A description of the technologies and techniques used-Figma was used as the outline to build the platform, VS code editor built the code and AI helped out shape it all.
 
