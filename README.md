@@ -26,6 +26,8 @@ A description of the project and its functionality-The Spots project is a social
 
 A description of the technologies and techniques used-Figma was used as the outline to build the platform, VS code editor built the code and AI helped out shape it all.
 
-Pictures, GIFs, or screenshots that detail the project features (highly recommended)-not sure how to add pictures here
+Pictures, GIFs, or screenshots that detail the project features (highly recommended)-not sure how to add pictures here.
+
 The link to your deployed project on GitHub Pages-https://mia-cran.github.io/se_project_spots/
-The link to your project pitch video
+
+The link to your project pitch video: https://www.loom.com/share/10ed042a35244de8a0e187e19cffd2cb
