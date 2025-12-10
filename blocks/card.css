@@ -13,7 +13,6 @@
 .card__title {
   margin: 0;
   font-size: 20px;
-  margin-top: 10px;
   font-weight: 500;
   line-height: 1.2;
   text-overflow: ellipsis;
@@ -23,6 +22,7 @@
 .card__content {
   display: flex;
   justify-content: space-between;
+  margin-top: 12px;
 }
 .card__like-button {
   background-color: transparent;
@@ -36,5 +36,13 @@
 @media screen and (max-width: 768px) {
   .card__image {
     height: 288px;
+
+    .card__title {
+      font-size: 16px;
+    }
+
+    .card__like-button {
+      height: 18px;
+    }
   }
 }
