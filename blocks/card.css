@@ -36,13 +36,12 @@
 @media screen and (max-width: 768px) {
   .card__image {
     height: 288px;
+  }
+  .card__title {
+    font-size: 16px;
+  }
 
-    .card__title {
-      font-size: 16px;
-    }
-
-    .card__like-button {
-      height: 18px;
-    }
+  .card__like-button {
+    height: 18px;
   }
 }
