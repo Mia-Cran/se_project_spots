@@ -25,6 +25,7 @@
   margin-top: 12px;
 }
 .card__like-button {
+  filter: brightness(1.5);
   background-color: transparent;
   appearance: none;
   border: none;
