@@ -28,6 +28,8 @@
   right: 50px;
   height: 40px;
   width: 40px;
+  opacity: 40%;
+  border: 5px;
 }
 .modal__title {
   margin: 0 0 10px;
@@ -46,7 +48,10 @@
   margin: 8px 0 0;
   width: 100%;
   color: #212121;
+  border-radius: 8px;
   padding: 16px 12px;
+  font-size: 20px;
+  border: 1px solid black;
 }
 .modal__label {
   margin: 0 0 32px;
@@ -57,7 +62,9 @@
 }
 .modal__submit-btn {
   max-width: 156px;
+  height: 52px;
   width: 100%;
   background-color: #212121;
   color: #fff;
+  border-radius: 8px;
 }
