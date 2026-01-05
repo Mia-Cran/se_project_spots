@@ -1,11 +1,14 @@
 .profile {
   display: flex;
   padding-top: 25px;
-  align-items: flex-start;
   gap: 20px;
   padding-bottom: 25px;
   border-bottom: 1px solid #21212166;
   max-width: 1350px;
+}
+.profile__content {
+  display: flex;
+  flex-direction: column;
 }
 .profile__pic {
   margin-left: 45px;
@@ -41,9 +44,10 @@
   gap: 8px;
   display: inline-flex;
   opacity: 70%;
-  margin-top: 90px;
   background-color: transparent;
   border: none;
+  margin-top: auto;
+  cursor: pointer;
 }
 .profile__edit-profile-button:hover {
   opacity: 100%;
@@ -59,11 +63,13 @@
   padding: 18px 32px;
   background-color: #212121;
   color: #ffffff;
-  margin-top: 135px;
+  margin-left: auto;
+  align-self: end;
   font-size: 16px;
   gap: 8px;
   border: none;
   border-radius: 8px;
+  cursor: pointer;
 }
 .profile__add-button:hover {
   opacity: 80%;
@@ -105,7 +111,7 @@
     align-items: center;
     justify-content: center;
   }
-  .profile__edit_profile-button {
+  .profile__edit-profile-button {
     margin-top: 32px;
   }
 }
