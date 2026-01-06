@@ -1,5 +1,8 @@
 .modal {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
   visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s, opacity 0.3s ease-in;
   background-color: #00000080;
   position: fixed;
   top: 0;
@@ -13,6 +16,7 @@
 }
 .modal_is-opened {
   visibility: visible;
+  opacity: 1;
 }
 .modal__container {
   max-width: 730px;
@@ -23,9 +27,7 @@
   position: relative;
   box-sizing: border-box;
 }
-.modal_is-opened .modal__container {
-  transition: opacity 0.2s, visibility 0.2s ease;
-}
+
 .modal__close-btn {
   position: absolute;
   top: 32px;
@@ -34,7 +36,7 @@
   width: 40px;
   opacity: 40%;
   border: none;
-  background-image: url("/images/close\ button.svg");
+  background-image: url("/images/close-button.svg");
   cursor: pointer;
   padding: 0;
 }
@@ -42,10 +44,12 @@
   opacity: 100%;
 }
 .modal__title {
-  margin: 0 0 10px;
+  /* margin: top left & right bottom*/
+  margin: 0 0 32px;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 32px;
   font-family: "Poppins", sans-serif;
+  gap: 32px;
 }
 .modal__form {
   display: flex;
@@ -88,5 +92,14 @@
   .modal__close-btn {
     top: 12px;
     right: 12px;
+    width: 40px;
+    height: 40px;
+  }
+  .modal__submit-btn {
+    max-width: 100%;
+  }
+  .modal__title {
+    margin: 10px 0px 34px;
+    font-size: 20px;
   }
 }
