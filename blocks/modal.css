@@ -37,7 +37,7 @@
   opacity: 40%;
   border: none;
   background-color: transparent;
-  background-image: url("/images/close-button.svg");
+  background-image: url("../images/close-button.svg");
   cursor: pointer;
   padding: 0;
 }
