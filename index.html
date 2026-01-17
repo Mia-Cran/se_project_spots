@@ -50,15 +50,11 @@
           <ul class="cards__list">
             <template id="card-template">
               <li class="card">
-                <img src="" alt="" class="card__image" />
+                <img alt="" class="card__image" />
                 <div class="card__content">
                   <h3 class="card__title"></h3>
-                  <button type="button" class="card__like-button">
-                    <img src="./images/gray-heart.svg" />
-                  </button>
-                  <button type="button" class="card__delete-button">
-                    <img src="./images/trashcan-icon.svg" />
-                  </button>
+                  <button type="button" class="card__like-button"></button>
+                  <button type="button" class="card__delete-button"></button>
                 </div>
               </li>
             </template>
@@ -108,6 +104,7 @@
               type="url"
               class="modal__input"
               placeholder="Paste a link to the picture"
+              required
             />
           </label>
           <label for="card-caption-input" class="modal__label">
@@ -117,6 +114,7 @@
               type="text"
               class="modal__input"
               placeholder="Type your caption"
+              required
             />
           </label>
           <button type="submit" class="modal__submit-btn">Save</button>
@@ -126,7 +124,7 @@
     <div class="modal" id="preview-image-modal">
       <div class="modal__container modal__container_type_preview">
         <button type="button" class="modal__close-btn"></button>
-        <img src="" alt="" class="modal__image" />
+        <img alt="" class="modal__image" />
         <p class="modal__caption"></p>
       </div>
     </div>
