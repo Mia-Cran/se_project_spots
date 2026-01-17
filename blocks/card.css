@@ -1,6 +1,7 @@
 .card {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .card__image {
@@ -24,15 +25,33 @@
   justify-content: space-between;
   margin-top: 12px;
 }
-.card__like-button {
-  filter: brightness(1.5);
-  background-color: transparent;
-  appearance: none;
+
+.card__delete-button {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
   border: none;
+}
+.card__delete-button:hover {
+  color: #ff6565;
+}
+.card__like-button {
+  border: none;
+  opacity: 0.5;
+  background: transparent;
 }
 .card__like-button:hover {
   opacity: 80%;
   cursor: pointer;
+}
+
+.card__like-button_is-liked {
+}
+
+.card__like-button_active:hover {
 }
 @media screen and (max-width: 768px) {
   .card__image {

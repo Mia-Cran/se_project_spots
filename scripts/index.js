@@ -23,10 +23,49 @@ const initialCards = [
     name: "Mountain house",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/6-photo-by-moritz-feldmann-from-pexels.jpg",
   },
+  {
+    name: "Landscape view",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg",
+  },
 ];
+
+const previewModal = document.getElementById("preview-image-modal");
+const previewImage = previewModal.querySelector(".modal__image");
+const previewCaption = previewModal.querySelector(".modal__caption");
+const previewCloseButton = previewModal.querySelector(".modal__close-btn");
+const cardTemplate = document.querySelector("#card-template");
+const cardsList = document.querySelector(".cards__list");
+
+function getCardElement(data) {
+  const cardElement = cardTemplate.content
+    .querySelector(".card")
+    .cloneNode(true);
+  const cardTitleEl = cardElement.querySelector(".card__title");
+  const cardImageEl = cardElement.querySelector(".card__image");
+  const likeButton = cardElement.querySelector(".card__like-button");
+  likeButton.addEventListener("click", function () {
+    likeButton.classList.toggle("card__like-button_is-liked");
+  });
+
+  const deleteButton = cardElement.querySelector(".card__delete-button");
+  deleteButton.addEventListener("click", function () {
+    deleteButton.closest(".card").remove();
+  });
+  cardImageEl.addEventListener("click", () => {
+    previewCaption.textContent = data.name;
+    previewImage.src = data.link;
+    previewImage.alt = data.name;
+    openModal(previewModal);
+  });
+
+  cardImageEl.src = data.link;
+  cardImageEl.alt = data.name;
+  cardTitleEl.textContent = data.name;
+  return cardElement;
+}
 initialCards.forEach(function (item) {
-  console.log(item.name);
-  console.log(item.link);
+  const cardElement = getCardElement(item);
+  cardsList.prepend(cardElement);
 });
 
 const editButton = document.querySelector(".profile__edit-profile-button");
@@ -72,7 +111,10 @@ function handleNewPostFormSubmit(evt) {
   const imageLink = document.getElementById("card-image-input").value;
   const caption = document.getElementById("card-caption-input").value;
   closeModal(newPostModalEl);
-  console.log(imageLink, caption);
+  const newCard = { name: caption, link: imageLink };
+  const newCardElement = getCardElement(newCard);
+  cardsList.prepend(newCardElement);
+  newPostForm.reset();
 }
 editProfileForm.addEventListener("submit", handleProfileFormSubmit);
 newPostForm.addEventListener("submit", handleNewPostFormSubmit);
@@ -87,4 +129,7 @@ newPostButtonEl.addEventListener("click", function () {
 
 newPostCloseButton.addEventListener("click", function () {
   closeModal(newPostModalEl);
+});
+previewCloseButton.addEventListener("click", function () {
+  closeModal(previewModal);
 });
