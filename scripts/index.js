@@ -36,7 +36,7 @@ const previewCloseButton = previewModal.querySelector(".modal__close-btn");
 const cardTemplate = document.querySelector("#card-template");
 const cardsList = document.querySelector(".cards__list");
 
-function getCardElement(data) {
+function renderCard(data) {
   const cardElement = cardTemplate.content
     .querySelector(".card")
     .cloneNode(true);
@@ -64,7 +64,7 @@ function getCardElement(data) {
   return cardElement;
 }
 initialCards.forEach(function (item) {
-  const cardElement = getCardElement(item);
+  const cardElement = renderCard(item);
   cardsList.prepend(cardElement);
 });
 
@@ -73,22 +73,19 @@ const profileNameEl = document.querySelector(".profile__name");
 const profileDescriptionEl = document.querySelector(".profile__description");
 const profileCloseButton = document.querySelector(".modal__close-btn");
 const newPostCloseButton = document.querySelector(
-  "#new-post-modal .modal__close-btn"
+  "#new-post-modal .modal__close-btn",
 );
 const profileModal = document.querySelector("#edit-profile-modal");
 const newPostModalEl = document.querySelector("#new-post-modal");
 const editProfileNameInput = document.querySelector("#profile-name-input");
 const editProfileDescriptionInput = document.querySelector(
-  "#profile-description-input"
+  "#profile-description-input",
 );
 const newPostButtonEl = document.querySelector(".profile__add-button");
-const editProfileForm = document.querySelector(
-  "#edit-profile-modal .modal__form"
-);
-const newPostForm = document.querySelector("#new-post-modal .modal__form");
+const editProfileForm = document.forms["edit-profile-form"];
+const newPostForm = document.forms["new-post-form"];
 
 function openModal(modal) {
-  console.log("Opening modal:", modal);
   modal.classList.add("modal_is-opened");
 }
 function closeModal(modal) {
@@ -108,11 +105,11 @@ function handleProfileFormSubmit(evt) {
 }
 function handleNewPostFormSubmit(evt) {
   evt.preventDefault();
-  const imageLink = document.getElementById("card-image-input").value;
-  const caption = document.getElementById("card-caption-input").value;
+  const imageLink = evt.target.elements["card-image-input"].value;
+  const caption = evt.target.elements["card-caption-input"].value;
   closeModal(newPostModalEl);
   const newCard = { name: caption, link: imageLink };
-  const newCardElement = getCardElement(newCard);
+  const newCardElement = renderCard(newCard);
   cardsList.prepend(newCardElement);
   newPostForm.reset();
 }

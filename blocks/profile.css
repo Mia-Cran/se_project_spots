@@ -32,7 +32,7 @@
   font-weight: 500;
   line-height: 100%;
   font-size: 16px;
-  opacity: 70%;
+  opacity: 100%;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -43,20 +43,20 @@
 .profile__edit-profile-button {
   gap: 8px;
   display: inline-flex;
-  opacity: 70%;
-  background-color: transparent;
+  opacity: 1;
+  background: url(../images/editprofilepencil.svg) left center no-repeat
+    transparent;
   border: none;
   margin-top: auto;
   cursor: pointer;
+  padding-left: 30px;
 }
+
 .profile__edit-profile-button:hover {
-  opacity: 100%;
+  opacity: 0.3;
   cursor: pointer;
 }
-.profile__edit-profile-pencil {
-  height: 16px;
-  width: 12px;
-}
+
 .profile__add-button {
   display: flex;
   margin-left: auto;
