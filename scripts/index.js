@@ -32,7 +32,9 @@ const initialCards = [
 const previewModal = document.getElementById("preview-image-modal");
 const previewImage = previewModal.querySelector(".modal__image");
 const previewCaption = previewModal.querySelector(".modal__caption");
-const previewCloseButton = previewModal.querySelector(".modal__close-btn");
+const previewCloseButton = previewModal.querySelector(
+  ".modal__close-btn.modal__close-btn_type_preview",
+);
 const cardTemplate = document.querySelector("#card-template");
 const cardsList = document.querySelector(".cards__list");
 
