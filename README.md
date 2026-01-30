@@ -31,3 +31,5 @@ Pictures, GIFs, or screenshots that detail the project features (highly recommen
 The link to your deployed project on GitHub Pages-https://mia-cran.github.io/se_project_spots/
 
 The link to your project pitch video: https://www.loom.com/share/10ed042a35244de8a0e187e19cffd2cb
+
+The newest link to my project pitch video: https://drive.google.com/file/d/1FPcgCPCM3paV_jsoxgoEIR94DnhtipBu/view?usp=drive_link (Loom will not allow  me to record a video and post the link here without paying for it)
