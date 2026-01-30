@@ -132,3 +132,21 @@ newPostCloseButton.addEventListener("click", function () {
 previewCloseButton.addEventListener("click", function () {
   closeModal(previewModal);
 });
+document.addEventListener("keydown", function (evt) {
+  if (evt.key === "Escape") {
+    if (profileModal.classList.contains("modal_is-opened"))
+      closeModal(profileModal);
+    if (newPostModalEl.classList.contains("modal_is-opened"))
+      closeModal(newPostModalEl);
+    if (previewModal.classList.contains("modal_is-opened"))
+      closeModal(previewModal);
+  }
+});
+document.addEventListener("keydown", function (evt) {
+  if (profileModal.classList.contains("modal_is-opened"))
+    closeModal(profileModal);
+  if (newPostModalEl.classList.contains("modal_is-opened"))
+    closeModal(newPostModalEl);
+  if (previewModal.classList.contains("modal_is-opened"))
+    closeModal(previewModal);
+});
