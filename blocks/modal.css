@@ -70,10 +70,10 @@
   box-sizing: border-box;
 }
 .modal__input_type_error {
-  border: 1px solid rgb(255, 0, 0, 0.6);
+  border: 1px solid rgba(255, 0, 0, 0.6);
 }
 .modal__error {
-  display: block;
+  display: none;
   margin-top: 8px;
   margin-bottom: 20px;
   color: red;

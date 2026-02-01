@@ -89,9 +89,21 @@ const newPostForm = document.forms["new-post-form"];
 
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
+  document.addEventListener("keydown", handleEscapeKey);
 }
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
+  document.removeEventListener("keydown", handleEscapeKey);
+}
+function handleEscapeKey(evt) {
+  if (evt.key === "Escape") {
+    if (profileModal.classList.contains("modal_is-opened"))
+      closeModal(profileModal);
+    if (newPostModalEl.classList.contains("modal_is-opened"))
+      closeModal(newPostModalEl);
+    if (previewModal.classList.contains("modal_is-opened"))
+      closeModal(previewModal);
+  }
 }
 
 editButton.addEventListener("click", function () {
@@ -132,21 +144,21 @@ newPostCloseButton.addEventListener("click", function () {
 previewCloseButton.addEventListener("click", function () {
   closeModal(previewModal);
 });
-document.addEventListener("keydown", function (evt) {
-  if (evt.key === "Escape") {
-    if (profileModal.classList.contains("modal_is-opened"))
-      closeModal(profileModal);
-    if (newPostModalEl.classList.contains("modal_is-opened"))
-      closeModal(newPostModalEl);
-    if (previewModal.classList.contains("modal_is-opened"))
-      closeModal(previewModal);
+
+profileModal.addEventListener("click", function (evt) {
+  if (evt.target === profileModal) {
+    closeModal(profileModal);
   }
 });
-document.addEventListener("keydown", function (evt) {
-  if (profileModal.classList.contains("modal_is-opened"))
-    closeModal(profileModal);
-  if (newPostModalEl.classList.contains("modal_is-opened"))
+
+newPostModalEl.addEventListener("click", function (evt) {
+  if (evt.target === newPostModalEl) {
     closeModal(newPostModalEl);
-  if (previewModal.classList.contains("modal_is-opened"))
+  }
+});
+
+previewModal.addEventListener("click", function (evt) {
+  if (evt.target === previewModal) {
     closeModal(previewModal);
+  }
 });
